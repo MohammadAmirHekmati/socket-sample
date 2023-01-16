@@ -6,13 +6,11 @@ import {Server, Socket} from "socket.io"
 import { PriceResponseDto } from "../dto/api.response";
 const WebSocket = require('ws');
 @WebSocketGateway({
-
-    path: '/price/',
+    path: '/test/',
     cors: {
       origin: '*',
     },
     pingTimeout:60000
-    // transports: ['websocket']
   })
 export class BinanceGateway{
     @WebSocketServer()
